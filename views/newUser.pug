@@ -1,0 +1,43 @@
+extends baseTemplate
+
+block content 
+    // SIGNUP FORM
+
+    .header_align 
+      .card-container1
+
+        .card
+      
+             .card__details1
+           
+               h1.card__sub-heading1 New User 
+               p.card__text Please enter the following Details
+          
+               form(action='/signup' method='POST')
+                   label(for='fname') First name 
+                   input#fname(type='text' name='fname')
+                   br
+                   br
+                   label(for='lname') Last name 
+                   input#lname(type='text' name='lname')
+                   br
+                   br
+                   label(for='email') Email 
+                   input#email(type='email' name='email')
+                   br
+                   br
+                   label(for='password') Password 
+                   input#password(type='password' name='password')
+                   br
+                   br
+                   label(for='cpassword') Confirm Password 
+                   input#cpassword(type='password' name='cpassword')
+                   br
+                   br
+                   input.card__sub-heading(type='submit' value='Submit')
+                   br
+                   br
+                   h1.card__sub-heading2 #{err}
+
+      
+
